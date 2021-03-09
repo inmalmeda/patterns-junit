@@ -7,8 +7,7 @@ import com.patterns.behavioral.state.state1.State;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("DeviceContextTest")
 public class DeviceContextTest {
@@ -41,7 +40,7 @@ void checkStatenotNull()  {
         State start = new OnState();
         stateContext.setDeviceState(start);
         stateContext.doAction();
-        assertTrue(!stateContext.getDeviceState().equals(""));
+        assertNotEquals("",stateContext.getDeviceState());
     }
     @Test
     @DisplayName("getDeviceStateOffnotNull")
@@ -59,7 +58,7 @@ void checkStatenotNull()  {
         State stop = new OffState();
         stateContext.setDeviceState(stop);
         stateContext.doAction();
-        assertTrue(!stateContext.getDeviceState().equals(""));
+        assertNotEquals("", stateContext.getDeviceState());
     }
     @Test
     @DisplayName("checkStateisON")
