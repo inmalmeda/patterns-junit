@@ -6,6 +6,7 @@ public class User extends AbstractUser{
         super(mediator, name);
     }
 
+
     @Override
     public void send(String message) {
         this.mediator.sendMessage(message, this);
@@ -13,6 +14,7 @@ public class User extends AbstractUser{
 
     @Override
     public void receive(String message) {
+       super.setMessage(message);
         System.out.println(this.name + ": message received " + message);
     }
 }
