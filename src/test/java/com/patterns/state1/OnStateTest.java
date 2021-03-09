@@ -10,14 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @DisplayName("OnState")
 public class OnStateTest {
 
-
-
-    @Test
-    @DisplayName("onStatenotNull")
-    void onStatenotNull()  {
-        State start = new OnState();
-        assertTrue(start!= null);
-    }
     @Test
     @DisplayName("onStateisOnState")
     void onStateisOnState()  {

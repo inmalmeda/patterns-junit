@@ -11,12 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class OffStateTest {
 
     @Test
-    @DisplayName("offStatenotNull")
-    void offStatenotNull()  {
-        State stop = new OffState();
-        assertTrue(stop!= null);
-    }
-    @Test
     @DisplayName("offStateisoffState")
     void offStateisoffState()  {
         State stop = new OffState();
