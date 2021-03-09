@@ -75,7 +75,6 @@ class WeatherTest {
         WeatherObserver computer = new Computer();
         computer.update(type);
 
-
-
+        assertEquals("Computer has been notified of weather change: " + type, ((Computer) computer).getReceivedMessages().get(0));
     }
 }
